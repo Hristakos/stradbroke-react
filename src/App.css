@@ -28,6 +28,65 @@
   color: #61dafb;
 }
 
+.logo {
+  width: 150px;
+}
+.App nav {
+  background-color: black;
+}
+.App nav a {
+  color: yellow;
+  text-decoration: none;
+}
+
+.App .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App .nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: -webkit-fill-available;
+}
+
+.App footer img {
+  width: 75px;
+  height: 75px;
+}
+.App footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
+.App footer p {
+  padding: 10px;
+}
+.App .products-scrollable {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 5px;
+  overflow-y: scroll; 
+  margin: 0 10%;
+  width: 80%;
+}
+.App .products-scrollable img {
+  width: 100%;
+
+}
+
+.App .icon {
+  width: 350px;
+}
+
+.product-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +95,19 @@
     transform: rotate(360deg);
   }
 }
+
+
+.product-card {
+  background-color: mistyrose;
+  width: 100%;
+  height: 50%;
+}
+
+.wrapper {
+   height: 100vh;
+   display: grid;
+   grid-template-rows: 50px 1fr 50px;
+}
+
+
+
