@@ -3,27 +3,12 @@ import './App.css';
 import {
   Switch,
   Route,
-  Link,
 } from 'react-router-dom'
 
-import Slider from "./slider/Slider.js"
+
 import NavBar from './NavBar';
+import Home from './Home'
 
-function Product(props) {
-  return <div className="product-wrapper">
-    <section className="icon">
-      <div className="icon-product-image-size">
-        <img src={props.imageName} />
-      </div>
-      <div className="icon-product-name">
-        <h1>{props.name}</h1>
-
-      </div>
-    </section>
-
-
-  </div>
-}
 
 class App extends React.Component {
 
@@ -37,12 +22,7 @@ class App extends React.Component {
 
   render() {
 
-    const products = [
-      { name: "Business", imageName: "business.png" },
-      { name: "Schools", imageName: "school.png" },
-      { name: "Tradies", imageName: "tradie.png" },
-      { name: "Promotions", imageName: "promotions.png" }
-    ]
+
     return (
       < div className="App" >
         <div className="wrapper">
@@ -70,24 +50,9 @@ class App extends React.Component {
               <div>Promotions</div>
             </Route>
             <Route to="/">
-              <div className="middle-section">
-                <div className="products-scrollable">
-
-                  {products.map((product, index) => (
-                    <Link key={index} to={`/${product.name}`}>
-                      <Product
-                        name={product.name}
-                        imageName={product.imageName}
-                      />
-                    </Link>
-                  ))}
-
-                </div>
-                <div className="slider" style={this.state.hideSlider ? { display: "none" } : { display: "block" }}>
-                  <Slider />
-                </div>
-              </div>
-
+              <Home
+                hideSlider={this.state.hideSlider}
+              />
             </Route>
 
           </Switch>
