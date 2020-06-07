@@ -1,0 +1,108 @@
+@import url("https://fonts.slider .googleapis.slider .com/css?family=Quicksand");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    /* color: #fff; */
+}
+
+/*====== WIDTH ======*/
+.slider .screenW {
+    width: 100vw;
+}
+.slider .fullW {
+    width: 100%;
+}
+/*====== HEIGHT ======*/
+.slider .screenH {
+    height: 500px;
+}
+.slider .fullH {
+    height: 100%;
+}
+.slider .height70 {
+    height: 70px;
+}
+/*====== BG COLOR ======*/
+.slider .dGray {
+    background-color: #333;
+}
+.slider .white {
+    background-color: #fff;
+}
+.slider .white50 {
+    background-color: #ffffff80;
+}
+.slider .black50 {
+    background-color: #00000080;
+}
+/*====== FONT ======*/
+.slider .fSize2 {
+    font-size: 2rem;
+}
+/*====== IMAGE ======*/
+.slider .imgCover {
+    object-fit: cover;
+}
+/*====== OVERFLOW ======*/
+.slider .overflowH {
+    overflow: hidden;
+}
+/*====== TRANSITIONS ======*/
+.slider .transition1l {
+    transition: left 1s ease-in-out;
+}
+/*====== POSITION ======*/
+.slider .abs {
+    position: absolute;
+}
+.slider .rel {
+    position: relative;
+}
+.slider .left0 {
+    left: 0px;
+}
+.slider .left100vw {
+    left: 100vw;
+}
+.slider .leftM100vw {
+    left: -100vw;
+}
+.slider .bot0 {
+    bottom: 0;
+}
+/*====== FLEX ======*/
+.slider .df {
+    display: flex;
+}
+.slider .row {
+    display: flex;
+    flex-direction: row;
+}
+.slider .col {
+    display: flex;
+    flex-direction: column;
+}
+.slider .fCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider .flex1 {
+    flex: 1;
+}
+.slider .flex8 {
+    flex: 8;
+}
+
+/*====== CUSTOM ======*/
+.slider .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    transition: background-color 1s ease-in-out;
+}
+
+/* .slider {
+width: 100%;
+} */

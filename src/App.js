@@ -6,11 +6,19 @@ import {
   Link,
 } from 'react-router-dom'
 
+import Slider from "./slider/Slider.js"
+import NavBar from './NavBar';
+
 function Product(props) {
   return <div className="product-wrapper">
     <section className="icon">
-      <img src={props.imageName} />
-      <h1>{props.name}</h1>
+      <div className="icon-product-image-size">
+        <img src={props.imageName} />
+      </div>
+      <div className="icon-product-name">
+        <h1>{props.name}</h1>
+
+      </div>
     </section>
 
 
@@ -18,6 +26,14 @@ function Product(props) {
 }
 
 class App extends React.Component {
+
+  state = {
+    hideSlider: false
+  }
+
+  handleNavClick = () => {
+    this.setState({ hideSlider: this.state.hideSlider ? false : true })
+  }
 
   render() {
 
@@ -31,42 +47,32 @@ class App extends React.Component {
       < div className="App" >
         <div className="wrapper">
           <nav className="nav-container">
-            <div>
-              <img className="logo" src="stradbroke-printing-logo.svg"></img>
+            <NavBar
+              onClick={this.handleNavClick} />
 
-            </div>
-            <div className="nav-links">
-              <a href="tel:0393053111">&#9742; 03 9305 3111</a>
-              <Link to="/">Home</Link>
-              <Link to="/About">About</Link>
-              <Link to="/Business">Business</Link>
-              <Link to="/Schools">Schools</Link>
-              <Link to="/Tradies">Tradies</Link>
-              <Link to="/Promotions">Promotions</Link>
-            </div>
           </nav>
-          <div>
 
+          <Switch>
 
-            <Switch>
+            <Route path="/About">
+              <div>About</div>
+            </Route>
+            <Route path="/Business">
+              <div>Business</div>
+            </Route>
+            <Route path="/Schools">
+              <div>Schools</div>
+            </Route>
+            <Route path="/Tradies">
+              <div>Tradies</div>
+            </Route>
+            <Route path="/Promotions">
+              <div>Promotions</div>
+            </Route>
+            <Route to="/">
+              <div className="middle-section">
+                <div className="products-scrollable">
 
-              <Route path="/About">
-                <div>About</div>
-              </Route>
-              <Route path="/Business">
-                <div>Business</div>
-              </Route>
-              <Route path="/Schools">
-                <div>Schools</div>
-              </Route>
-              <Route path="/Tradies">
-                <div>Tradies</div>
-              </Route>
-              <Route path="/Promotions">
-                <div>Promotions</div>
-              </Route>
-              <Route to="/">
-                <section className="products-scrollable">
                   {products.map((product, index) => (
                     <Link key={index} to={`/${product.name}`}>
                       <Product
@@ -76,12 +82,16 @@ class App extends React.Component {
                     </Link>
                   ))}
 
-                </section>
+                </div>
+                <div className="slider" style={this.state.hideSlider ? { display: "none" } : { display: "block" }}>
+                  <Slider />
+                </div>
+              </div>
 
-              </Route>
+            </Route>
 
-            </Switch>
-          </div>
+          </Switch>
+
           <footer>
             <p>76 HUME HIGHWAY SOMERTON VIC 3062 </p>
             <img src="aus-logo.png" />
