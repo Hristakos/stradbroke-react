@@ -8,6 +8,9 @@ import {
 
 import NavBar from './NavBar';
 import Home from './Home'
+import Products from './Products';
+import About from './About';
+import Order from './Order';
 
 
 class App extends React.Component {
@@ -26,28 +29,53 @@ class App extends React.Component {
     return (
       < div className="App" >
         <div className="wrapper">
-          <nav className="nav-container">
+          <nav>
             <NavBar
               onClick={this.handleNavClick} />
-
           </nav>
 
           <Switch>
 
             <Route path="/About">
-              <div>About</div>
+
+              <About />
+
             </Route>
             <Route path="/Business">
-              <div>Business</div>
+              <div className="middle-section">
+                <div className="products-scrollable">
+                  <Products />
+                </div>
+              </div>
             </Route>
             <Route path="/Schools">
-              <div>Schools</div>
+              <div className="middle-section">
+                <div className="products-scrollable">
+                  <Products />
+                </div>
+              </div>
             </Route>
             <Route path="/Tradies">
-              <div>Tradies</div>
+              <div className="middle-section">
+                <div className="products-scrollable">
+                  <Products />
+                </div>
+              </div>
             </Route>
             <Route path="/Promotions">
-              <div>Promotions</div>
+              <div className="middle-section">
+                <div className="products-scrollable">
+                  <Products />
+                </div>
+              </div>
+            </Route>
+            <Route path="/Order">
+              <div className="middle-section">
+                <div className="products-scrollable">
+                  <Products />
+                </div>
+                <Order />
+              </div>
             </Route>
             <Route to="/">
               <Home

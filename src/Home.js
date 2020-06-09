@@ -6,9 +6,7 @@ export default function Home(props) {
 
     return (
         <div className="middle-section">
-            <div className="products-scrollable">
-                <Products />
-            </div>
+            <Products />
 
             <div className="slider" style={props.hideSlider ? { display: "none" } : { display: "block" }}>
                 <Slider />

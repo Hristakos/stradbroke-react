@@ -39,12 +39,10 @@
   text-decoration: none;
 }
 
-.App .nav-links {
-  display: flex;
-  justify-content: space-evenly;
-  width: -webkit-fill-available;
-}
+.nav-container img{
+  float: left;
 
+}
 .App footer img {
   width: 75px;
   height: 75px;
@@ -68,9 +66,12 @@
   background-color: white;
 }
 
-.App .icon {
-  width: 350px;
+.App .products-scrollable a {
+  background-color: white;
+  border: 3px solid black;
 }
+
+
 
 .product-wrapper {
   display: flex;

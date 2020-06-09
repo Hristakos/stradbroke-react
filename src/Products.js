@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import "./Products.css"
 
 const products = [
     { name: "Business", imageName: "business.png" },
@@ -24,7 +25,7 @@ function Product(props) {
 }
 export default function Products() {
     return (
-        <React.Fragment>
+        <div className="products-scrollable">
             {
                 products.map((product, index) => (
                     <Link key={index} to={`/${product.name}`}>
@@ -35,7 +36,7 @@ export default function Products() {
                     </Link>
                 ))
             }
-        </React.Fragment>
+        </div>
 
 
     )

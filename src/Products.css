@@ -1,0 +1,35 @@
+
+.icon a.active, a:hover {
+  background: none;
+  transition: .5s;
+  }
+
+@media (max-width: 858px) {
+    .App .icon {
+      width: 100px;
+    }
+    .App .icon-product-name {
+        display: flex;
+        width: 100px;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        font-size: 8px;
+      }
+      
+      .App .icon-product-image-size {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+      }
+      .App .products-scrollable {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr) );
+      }
+      .App .products-scrollable img {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+      }
+}

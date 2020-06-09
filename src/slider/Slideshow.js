@@ -116,7 +116,7 @@ class Slideshow extends Component {
                     position={slide2.position}
                     transition={slide2.transition ? s.transition : ""}
                 />
-                <Dots slideId={currentId} slides={slides} />
+                {/* <Dots slideId={currentId} slides={slides} /> */}
             </div>
         );
     }
