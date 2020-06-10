@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import "./OrderForm.css"
-
+import productsBusiness from './lib/productBusiness';
 
 export default class OrderForm extends React.Component {
     state = {
@@ -53,7 +53,7 @@ export default class OrderForm extends React.Component {
 
     }
     render() {
-
+        console.log(this.props.id)
         return (
             // <div>
 
@@ -85,10 +85,10 @@ export default class OrderForm extends React.Component {
                             <input onChange={this.handlePhoneChange} type="text" className="input-field" name="phone" />
                         </label>
                         <label htmlFor="product"><span>Product<span className="required">*</span></span>
-                            <select onChange={this.handleProductChange} name="product" className="select-field">
-                                <option value="Appointment">Appointment</option>
-                                <option value="Interview">Interview</option>
-                                <option value="Regarding a post">Regarding a post</option>
+                            <select onChange={this.handleProductChange} name="product" className="select-field" value={this.props.id}>
+                                {productsBusiness.map(product => (
+                                    <option key={product.id} value={product.id}>{product.name}</option>
+                                ))}
                             </select>
                         </label>
                         <label htmlFor="quantity">

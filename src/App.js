@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {
   Switch,
-  Route,
+  Route
 } from 'react-router-dom'
 
 
@@ -11,22 +11,27 @@ import Home from './Home'
 import Products from './Products';
 import About from './About';
 import Order from './Order';
-
+import ProductDisplay from './ProductDisplay';
+import productsBusiness from './lib/productBusiness';
+import productSchools from './lib/productSchools';
 
 class App extends React.Component {
 
   state = {
-    hideSlider: false
+    hideSlider: false,
+    productType: ""
   }
 
   handleNavClick = () => {
     this.setState({ hideSlider: this.state.hideSlider ? false : true })
   }
 
+
   render() {
 
 
     return (
+
       < div className="App" >
         <div className="wrapper">
           <nav>
@@ -46,12 +51,36 @@ class App extends React.Component {
                 <div className="products-scrollable">
                   <Products />
                 </div>
+                <div className="product-display">
+                  {productsBusiness.map(product => (
+                    <ProductDisplay
+                      key={product.id}
+                      type={product.type}
+                      name={product.name}
+                      id={product.id}
+                      img={product.img}
+                    />
+                  ))}
+
+                </div>
               </div>
             </Route>
             <Route path="/Schools">
               <div className="middle-section">
                 <div className="products-scrollable">
                   <Products />
+                </div>
+                <div className="product-display">
+                  {productSchools.map(product => (
+                    <ProductDisplay
+                      key={product.id}
+                      type={product.type}
+                      name={product.name}
+                      id={product.id}
+                      img={product.img}
+                    />
+                  ))}
+
                 </div>
               </div>
             </Route>
@@ -70,6 +99,7 @@ class App extends React.Component {
               </div>
             </Route>
             <Route path="/Order">
+
               <div className="middle-section">
                 <div className="products-scrollable">
                   <Products />
