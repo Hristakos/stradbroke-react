@@ -21,9 +21,9 @@ export default class ProductDetail extends React.Component {
                     <a href={`/Order?type=${this.props.type}&id=${this.props.id}`}>Order</a>
                 </div>
 
-                <div id="myModal" class="modal" style={{ display: this.state.modalDisplay ? "block" : "none" }}>
-                    <span onClick={this.handleClose} class="close">&times;</span>
-                    <img class="modal-content" id="img01" src={this.props.img} />
+                <div id="myModal" className="modal" style={{ display: this.state.modalDisplay ? "block" : "none" }}>
+                    <span onClick={this.handleClose} className="close">&times;</span>
+                    <img className="modal-content" id="img01" src={this.props.img} />
                     <div id="caption"></div>
                 </div>
             </div>

@@ -1,0 +1,35 @@
+.order-failure{
+    height: 200px;
+    position: relative;
+}
+
+.order-failure h3 {
+    color: red;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-height: 700px) {
+    .order-failure{
+        height: 300px;
+        position: relative;
+    }
+
+}
+@media (min-height: 850px) {
+    .order-failure{
+        height: 400px;
+        position: relative;
+    }
+
+}
+@media (min-height: 1000px) {
+    .order-failure{
+        height: 500px;
+        position: relative;
+    }
+
+}

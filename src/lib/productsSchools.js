@@ -11,6 +11,12 @@ const productsSchools = [
     { type: "Schools", name: "s product 10", id: "10", img: "notes.jpg" },
     { type: "Schools", name: "s product 11", id: "11", img: "notes.jpg" },
     { type: "Schools", name: "s product 12", id: "12", img: "notes.jpg" },
+    { type: "Schools", name: "s product 13", id: "13", img: "notes.jpg" },
+    { type: "Schools", name: "s product 14", id: "14", img: "notes.jpg" },
+    { type: "Schools", name: "s product 15", id: "15", img: "notes.jpg" },
+    { type: "Schools", name: "s product 16", id: "16", img: "notes.jpg" },
+    { type: "Schools", name: "s product 17", id: "17", img: "notes.jpg" },
+    { type: "Schools", name: "s product 18", id: "18", img: "notes.jpg" },
 
 ];
 

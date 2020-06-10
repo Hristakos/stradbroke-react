@@ -12,8 +12,12 @@ import Products from './Products';
 import About from './About';
 import Order from './Order';
 import ProductDisplay from './ProductDisplay';
-import productsBusiness from './lib/productBusiness';
-import productSchools from './lib/productSchools';
+import productsBusiness from './lib/productsBusiness';
+import productsSchools from './lib/productsSchools';
+import productsTradies from './lib/productsTradies';
+import productsPromotions from './lib/productsPromotions';
+import OrderSuccess from './OrderSuccess';
+import OrderFailure from './OrderFailure';
 
 class App extends React.Component {
 
@@ -71,7 +75,7 @@ class App extends React.Component {
                   <Products />
                 </div>
                 <div className="product-display">
-                  {productSchools.map(product => (
+                  {productsSchools.map(product => (
                     <ProductDisplay
                       key={product.id}
                       type={product.type}
@@ -89,6 +93,18 @@ class App extends React.Component {
                 <div className="products-scrollable">
                   <Products />
                 </div>
+                <div className="product-display">
+                  {productsTradies.map(product => (
+                    <ProductDisplay
+                      key={product.id}
+                      type={product.type}
+                      name={product.name}
+                      id={product.id}
+                      img={product.img}
+                    />
+                  ))}
+
+                </div>
               </div>
             </Route>
             <Route path="/Promotions">
@@ -96,6 +112,37 @@ class App extends React.Component {
                 <div className="products-scrollable">
                   <Products />
                 </div>
+                <div className="product-display">
+                  {productsPromotions.map(product => (
+                    <ProductDisplay
+                      key={product.id}
+                      type={product.type}
+                      name={product.name}
+                      id={product.id}
+                      img={product.img}
+                    />
+                  ))}
+
+                </div>
+              </div>
+            </Route>
+            <Route path="/OrderSuccess">
+
+              <div className="middle-section">
+                <div className="products-scrollable">
+                  <Products />
+                </div>
+                <OrderSuccess />
+              </div>
+            </Route>
+
+            <Route path="/OrderSomethingWentWrong">
+
+              <div className="middle-section">
+                <div className="products-scrollable">
+                  <Products />
+                </div>
+                <OrderFailure />
               </div>
             </Route>
             <Route path="/Order">

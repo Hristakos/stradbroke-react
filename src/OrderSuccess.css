@@ -1,0 +1,35 @@
+.order-success{
+    height: 200px;
+    position: relative;
+}
+
+.order-success h3 {
+    color: green;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-height: 700px) {
+    .order-success{
+        height: 300px;
+        position: relative;
+    }
+
+}
+@media (min-height: 850px) {
+    .order-success{
+        height: 400px;
+        position: relative;
+    }
+
+}
+@media (min-height: 1000px) {
+    .order-success{
+        height: 500px;
+        position: relative;
+    }
+
+}

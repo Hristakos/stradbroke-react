@@ -15,7 +15,7 @@ export default function NavBar(props) {
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/About">About</a></li>
-                <li><a href="/Order">Order</a></li>
+                <li><a href="/Order?type=Business&id=1" > Order</a></li>
                 <li><a href="/Newsletter">Newsletter</a></li>
             </ul>
 

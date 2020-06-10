@@ -64,11 +64,13 @@
   width: 100%;
   height: 200px;
   background-color: white;
+  border: none;
 }
 
 .App .products-scrollable a {
   background-color: white;
   border: 3px solid black;
+  border-radius: 30px;
 }
 
 

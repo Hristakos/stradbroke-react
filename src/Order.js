@@ -28,16 +28,16 @@ export default function Order(props) {
 
 
                 <div id="tab-four-panel" className="panel">
-                    promotions
+                    <OrderForm products="Promotions" id={id} />
                 </div>
                 <div id="tab-three-panel" className="panel">
-                    tradies
-            </div>
+                    <OrderForm products="Tradies" id={id} />
+                </div>
                 <div id="tab-two-panel" className="panel">
-                    schools
-            </div>
+                    <OrderForm products="Schools" id={id} />
+                </div>
                 <div id="tab-one-panel" className="panel">
-                    <OrderForm id={id} />
+                    <OrderForm products="Business" id={id} />
                 </div>
             </div>
 
