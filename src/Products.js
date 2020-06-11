@@ -9,11 +9,13 @@ const products = [
     { name: "Promotions", imageName: "promotions.png" }
 ]
 function Product(props) {
+    console.log(props.type === props.name);
+
     return (
-        <div className="product-wrapper">
+        <div className={props.type === props.name ? "product-wrapper selected" : "product-wrapper"}>
             <section className="icon">
                 <div className="icon-product-image-size">
-                    <img src={props.imageName} />
+                    <img src={`/${props.imageName}`} />
                 </div>
                 <div className="icon-product-name">
                     <h1>{props.name}</h1>
@@ -23,7 +25,7 @@ function Product(props) {
         </div>
     )
 }
-export default function Products() {
+export default function Products(props) {
     return (
         <div className="products-scrollable">
             {
@@ -32,6 +34,7 @@ export default function Products() {
                         <Product
                             name={product.name}
                             imageName={product.imageName}
+                            type={props.type}
                         />
                     </Link>
                 ))

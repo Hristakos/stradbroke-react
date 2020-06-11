@@ -1,13 +1,14 @@
-.form-style-3{
+.contact-form{
 	/* max-width: 450px; */
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    width: 100%;
+    width: 60%;
+    margin: 20px 20%;
 }
-.form-style-3 label{
+.contact-form label{
 	display:block;
 	margin-bottom: 10px;
 }
-.form-style-3 label > span{
+.contact-form label > span{
 	float: left;
 	width: 100px;
 	color: black;
@@ -15,7 +16,7 @@
 	font-size: 13px;
 	text-shadow: 1px 1px 1px #fff;
 }
-.form-style-3 fieldset{
+.contact-form fieldset{
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -27,7 +28,7 @@
 	-moz-box-shadow: inset 0px 0px 15px lemonchiffon;
 	-webkit-box-shadow: inset 0px 0px 15px lemonchiffon;
 }
-.form-style-3 fieldset legend{
+.contact-form fieldset legend{
 	color: #FFA0C9;
 	border-top: 1px solid yellow;
 	border-left: 1px solid yellow;
@@ -43,20 +44,20 @@
 	font-weight: normal;
 	font-size: 12px;
 }
-.form-style-3 textarea{
+.contact-form textarea{
 	width:250px;
 	height:100px;
 }
-.form-style-3 input[type=text],
-.form-style-3 input[type=date],
-.form-style-3 input[type=datetime],
-.form-style-3 input[type=number],
-.form-style-3 input[type=search],
-.form-style-3 input[type=time],
-.form-style-3 input[type=url],
-.form-style-3 input[type=email],
-.form-style-3 select, 
-.form-style-3 textarea{
+.contact-form input[type=text],
+.contact-form input[type=date],
+.contact-form input[type=datetime],
+.contact-form input[type=number],
+.contact-form input[type=search],
+.contact-form input[type=time],
+.contact-form input[type=url],
+.contact-form input[type=email],
+.contact-form select, 
+.contact-form textarea{
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -70,8 +71,8 @@
 	background: white;
 	width:50%;
 }
-.form-style-3  input[type=submit],
-.form-style-3  input[type=button]{
+.contact-form  input[type=submit],
+.contact-form  input[type=button]{
 	background: yellow;
 	border: 1px solid black;
 	padding: 5px 15px 5px 15px;
@@ -92,7 +93,7 @@
 
 @media (max-width: 600px){
 
-	.form-style-3 label > span{
+	.contact-form label > span{
 	float: left;
 	width: 100%;
 	color: black;
@@ -101,22 +102,17 @@
 	text-shadow: 1px 1px 1px #fff;
 }
 
-	.form-style-3 input[type=text],
-	.form-style-3 input[type=date],
-	.form-style-3 input[type=datetime],
-	.form-style-3 input[type=number],
-	.form-style-3 input[type=search],
-	.form-style-3 input[type=time],
-	.form-style-3 input[type=url],
-	.form-style-3 input[type=email],
-	.form-style-3 select, 
-	.form-style-3 textarea{
+	.contact-form input[type=text],
+	.contact-form input[type=date],
+	.contact-form input[type=datetime],
+	.contact-form input[type=number],
+	.contact-form input[type=search],
+	.contact-form input[type=time],
+	.contact-form input[type=url],
+	.contact-form input[type=email],
+	.contact-form select, 
+	.contact-form textarea{
 	font-size: 8px;
 	}
 
-}
-
-.form-style-3 img {
-	width: 100px;
-	height: 100px;
 }

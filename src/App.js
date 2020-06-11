@@ -18,6 +18,8 @@ import productsTradies from './lib/productsTradies';
 import productsPromotions from './lib/productsPromotions';
 import OrderSuccess from './OrderSuccess';
 import OrderFailure from './OrderFailure';
+import Customers from './Customers';
+import ContactForm from './ContactForm';
 
 class App extends React.Component {
 
@@ -53,7 +55,7 @@ class App extends React.Component {
             <Route path="/Business">
               <div className="middle-section">
                 <div className="products-scrollable">
-                  <Products />
+                  <Products type="Business" />
                 </div>
                 <div className="product-display">
                   {productsBusiness.map(product => (
@@ -72,7 +74,7 @@ class App extends React.Component {
             <Route path="/Schools">
               <div className="middle-section">
                 <div className="products-scrollable">
-                  <Products />
+                  <Products type="Schools" />
                 </div>
                 <div className="product-display">
                   {productsSchools.map(product => (
@@ -91,7 +93,7 @@ class App extends React.Component {
             <Route path="/Tradies">
               <div className="middle-section">
                 <div className="products-scrollable">
-                  <Products />
+                  <Products type="Tradies" />
                 </div>
                 <div className="product-display">
                   {productsTradies.map(product => (
@@ -110,7 +112,7 @@ class App extends React.Component {
             <Route path="/Promotions">
               <div className="middle-section">
                 <div className="products-scrollable">
-                  <Products />
+                  <Products type="Promotions" />
                 </div>
                 <div className="product-display">
                   {productsPromotions.map(product => (
@@ -152,6 +154,34 @@ class App extends React.Component {
                   <Products />
                 </div>
                 <Order />
+              </div>
+            </Route>
+            <Route path="/Customers">
+
+              <div className="middle-section">
+                <div className="products-scrollable">
+                  <Products />
+                </div>
+                <Customers />
+              </div>
+            </Route>
+            <Route path="/Newsletter">
+
+              <div className="middle-section">
+                <div className="products-scrollable">
+                  <Products />
+                </div>
+                <h1>Newsletter</h1>
+              </div>
+            </Route>
+
+            <Route path="/Contact">
+
+              <div className="middle-section">
+                <div className="products-scrollable">
+                  <Products />
+                </div>
+                <ContactForm />
               </div>
             </Route>
             <Route to="/">

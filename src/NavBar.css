@@ -12,10 +12,20 @@ nav {
     width: 100%;
 }
 
-nav ul {
+.nav-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+  .nav-container .check-btn {
+      text-align: right;
+      margin-right: 20px;
+  }
+
+/* nav ul {
     float: right;
     margin-right: 20px;
-}
+} */
 
 nav ul li {
     display: inline-block;
@@ -31,14 +41,17 @@ nav ul li a {
     text-transform: uppercase;
 }
 .App nav .phone {
-    line-height: 80px;
+    
     color: yellow;
     font-size: 17px;
+    text-align: left;
+    margin-left: 20px;
 }
 
 nav img {
-    width: 150px;
+    width: 100%;
     height: 80px;
+
 }
 a.active, a:hover {
     background:grey;
@@ -50,22 +63,86 @@ a.active, a:hover {
     color: yellow;
     float: right;
     line-height: 80px;
-    margin-right: 40px;
+    margin-right: 10px;
     cursor: pointer;
-    display: none;
+    display: block;
 }
 #check {
     display: none;
 }
 
-@media (max-width: 952px) {
+/* @media (max-width: 952px) {
     nav ul li a {
         font-size: 16px;
 
     }
+} */
+
+/* .check-btn{
+    display: block;
+} */
+ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    background: black;
+    left: 0;
+    text-align: center;
+    transition: all .5s;
 }
 
-@media (max-width: 858px) {
+nav ul li {
+    display: block;
+    margin: 10px 0;
+    line-height: 30px;
+}
+
+nav ul li a {
+    font-size: 20px;
+}
+
+li a:hover, li a.active {
+    background: grey;
+    color: white
+}
+#check:checked ~ ul {
+    top: 80px;
+
+}
+#check:checked ~ .slider {
+    display: none;
+    
+}
+
+@media (max-height: 320px) {
+    /* .slider .screenH {
+        height: 300px;
+    }
+    .slider .fullH {
+        height: 300px;
+    } */
+
+}
+/* @media (min-height: 850px) {
+    .slider .screenH {
+        height: 400px;
+    }
+    .slider .fullH {
+        height: 400px;
+    }
+
+}
+@media (min-height: 1000px) {
+    .slider .screenH {
+        height: 500px;
+    }
+    .slider .fullH {
+        height: 500px;
+    }
+
+} */
+/* @media (max-width: 858px) {
     .check-btn{
         display: block;
     }
@@ -114,4 +191,4 @@ a.active, a:hover {
         font-size: 12px;
     }
 
-}
+} */

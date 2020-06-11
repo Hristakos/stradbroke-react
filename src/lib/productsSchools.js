@@ -1,22 +1,14 @@
 const productsSchools = [
-    { type: "Schools", name: "s product 1", id: "1", img: "notes.jpg" },
-    { type: "Schools", name: "s product 2", id: "2", img: "notes.jpg" },
-    { type: "Schools", name: "s product 3", id: "3", img: "notes.jpg" },
-    { type: "Schools", name: "s product 4", id: "4", img: "notes.jpg" },
-    { type: "Schools", name: "s product 5", id: "5", img: "notes.jpg" },
-    { type: "Schools", name: "s product 6", id: "6", img: "notes.jpg" },
-    { type: "Schools", name: "s product 7", id: "7", img: "notes.jpg" },
-    { type: "Schools", name: "s product 8", id: "8", img: "notes.jpg" },
-    { type: "Schools", name: "s product 9", id: "9", img: "notes.jpg" },
-    { type: "Schools", name: "s product 10", id: "10", img: "notes.jpg" },
-    { type: "Schools", name: "s product 11", id: "11", img: "notes.jpg" },
-    { type: "Schools", name: "s product 12", id: "12", img: "notes.jpg" },
-    { type: "Schools", name: "s product 13", id: "13", img: "notes.jpg" },
-    { type: "Schools", name: "s product 14", id: "14", img: "notes.jpg" },
-    { type: "Schools", name: "s product 15", id: "15", img: "notes.jpg" },
-    { type: "Schools", name: "s product 16", id: "16", img: "notes.jpg" },
-    { type: "Schools", name: "s product 17", id: "17", img: "notes.jpg" },
-    { type: "Schools", name: "s product 18", id: "18", img: "notes.jpg" },
+    { type: "Schools", name: "Calendars", id: "Calendars", img: "/school/calendars.jpg" },
+    { type: "Schools", name: "Certificates", id: "Certificates", img: "/school/certificates.jpg" },
+    { type: "Schools", name: "Envelopes", id: "Envelopes", img: "/school/envelopes.jpg" },
+    { type: "Schools", name: "Illness & Injury Books", id: "Illness & Injury Books", img: "/school/illness_injury_books.jpg" },
+    { type: "Schools", name: "Letterheads", id: "Letterheads", img: "/school/letterheads.jpg" },
+    { type: "Schools", name: "Presentation Folders", id: "Presentation Folders", img: "/school/presentation_folders.jpg" },
+    { type: "Schools", name: "Purchase Order Books", id: "Purchase Order Books", img: "/school/purchase_order_books.jpg" },
+    { type: "Schools", name: "Student Handbooks", id: "Student Handbooks", img: "/school/student_handbooks.jpg" },
+    { type: "Schools", name: "Visitor & Leave Passes", id: "Visitor & Leave Passes", img: "/school/visitor_early_leaver_passes.jpg" },
+    { type: "Schools", name: "Yearbooks", id: "Yearbooks", img: "/school/yearbooks.jpg" }
 
 ];
 

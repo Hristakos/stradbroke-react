@@ -1,0 +1,15 @@
+.customers {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr) );
+    margin-top: 20px;
+}
+
+.customers .customer-detail img {
+    width: 150px;
+}
+
+.heading {
+    color: white;
+    margin-top: 20px;
+}

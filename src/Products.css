@@ -4,6 +4,12 @@
   transition: .5s;
   }
 
+  .App .selected {
+    background-color: yellow;
+    border: 3px solid yellow;
+    border-radius: none;
+  }
+
 @media (max-width: 858px) {
     .App .icon {
       width: 100px;
@@ -32,4 +38,7 @@
         height: 100px;
         background-color: white;
       }
+
+
+
 }

@@ -39,10 +39,7 @@
   text-decoration: none;
 }
 
-.nav-container img{
-  float: left;
 
-}
 .App footer img {
   width: 75px;
   height: 75px;
@@ -121,6 +118,8 @@
   display: flex;
   justify-content: center;
 }
+
+
 
 
 

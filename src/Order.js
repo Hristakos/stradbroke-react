@@ -10,6 +10,7 @@ export default function Order(props) {
     let query = useQuery();
     const type = query.get("type")
     const id = query.get("id")
+    const image = query.get("image");
     console.log(type)
     return (
 
@@ -28,16 +29,16 @@ export default function Order(props) {
 
 
                 <div id="tab-four-panel" className="panel">
-                    <OrderForm products="Promotions" id={id} />
+                    <OrderForm products="Promotions" id={id} image={image} />
                 </div>
                 <div id="tab-three-panel" className="panel">
-                    <OrderForm products="Tradies" id={id} />
+                    <OrderForm products="Tradies" id={id} image={image} />
                 </div>
                 <div id="tab-two-panel" className="panel">
-                    <OrderForm products="Schools" id={id} />
+                    <OrderForm products="Schools" id={id} image={image} />
                 </div>
                 <div id="tab-one-panel" className="panel">
-                    <OrderForm products="Business" id={id} />
+                    <OrderForm products="Business" id={id} image={image} />
                 </div>
             </div>
 
