@@ -53,30 +53,11 @@
 .App footer p {
   padding: 10px;
 }
-.App .products-scrollable {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
-}
-.App .products-scrollable img {
-  width: 100%;
-  height: 200px;
-  background-color: white;
-  border: none;
-}
-
-.App .products-scrollable a {
-  background-color: white;
-  border: 3px solid black;
-  border-radius: 30px;
-}
 
 
 
-.product-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -101,23 +82,14 @@
 .App .middle-section {
   overflow-y: scroll; 
   overflow-x: hidden;
+  overflow: scroll;
   margin: 20px 0;
   width: 100%;
 }
 
-.App .icon-product-name {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-}
 
-.App .icon-product-image-size {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+
+
 
 
 

@@ -135,7 +135,7 @@ export default class OrderForm extends React.Component {
     render() {
         console.log(this.state.image)
         const products = this.getProducts();
-        const reCapture_SITE_KEY = process.env.REACT_APP_RECAPTURE_SITE_KEY;
+        // const reCapture_SITE_KEY = process.env.REACT_APP_RECAPTURE_SITE_KEY;
         return this.state.requestError ? (<Redirect to="/OrderSomethingWentWrong" />) :
             this.state.responseReceived ? (<Redirect to="/OrderSuccess" />) :
                 (

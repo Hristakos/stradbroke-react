@@ -9,7 +9,12 @@ export default function Home(props) {
             <Products />
 
             <div className="slider" style={props.hideSlider ? { display: "none" } : { display: "block" }}>
-                <Slider />
+                <Slider
+                    slide1={props.slide1}
+                    slide2={props.slide2}
+                    slides={props.slides}
+                    handleMount={props.handleMount}
+                    handleUnmount={props.handleUnmount} />
             </div>
         </div>
     )

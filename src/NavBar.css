@@ -40,7 +40,7 @@ nav ul li a {
     border-radius: 3px;
     text-transform: uppercase;
 }
-.App nav .phone {
+.nav-container  .phone {
     
     color: yellow;
     font-size: 17px;
@@ -115,15 +115,17 @@ li a:hover, li a.active {
     
 }
 
-@media (max-height: 320px) {
-    /* .slider .screenH {
-        height: 300px;
+
+@media (max-width: 450px) {
+ .nav-container  .phone {
+        line-height: 80px;
+        color: yellow;
+        font-size: 10px;
     }
-    .slider .fullH {
-        height: 300px;
-    } */
 
 }
+
+
 /* @media (min-height: 850px) {
     .slider .screenH {
         height: 400px;
@@ -184,11 +186,4 @@ li a:hover, li a.active {
 
 }
 
-@media (max-width: 350px) {
-    .App nav .phone {
-        line-height: 80px;
-        color: yellow;
-        font-size: 12px;
-    }
-
-} */
+ */

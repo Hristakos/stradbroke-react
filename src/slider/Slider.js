@@ -8,6 +8,7 @@ import slide2 from "./assets/slide2.jpg";
 import slide3 from "./assets/slide3.jpg";
 import slide4 from "./assets/slide4.jpg";
 import slide5 from "./assets/slide5.jpg";
+
 import "./Slider.css";
 
 //===========================================
@@ -23,18 +24,35 @@ const s = {
 //===========================================
 // SLIDES DATA
 //===========================================
-const slides = [slide1, slide2, slide3, slide4, slide5];
+const slides = [slide1, slide2, slide3, slide4];
 
 //===========================================
 // APP COMPONENT
 //===========================================
+
 class Slider extends React.Component {
+
+    componentDidMount() {
+        console.log("CDM.")
+        this.props.handleMount()
+
+
+    }
+
+    componentWillUnmount() {
+
+        console.log("Unmount")
+        this.props.handleUnmount()
+    }
     render() {
         return (
             <div className={s.container}>
                 {/* <div className={s.header}>Products</div> */}
                 <div className={s.main}>
-                    <Slideshow slides={slides} />
+                    <Slideshow slides={slides}
+                        slide1={this.props.slide1}
+                        slide2={this.props.slide2}
+                        slides={this.props.slides} />
                 </div>
                 {/* <div className={s.footer}>Built in React - by Ashwanth A R</div> */}
             </div>

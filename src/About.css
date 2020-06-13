@@ -1,0 +1,16 @@
+.about-wrapper {
+    margin: 20px 10px;
+    word-break: break-word;
+}
+
+.about-wrapper  h2,p {
+    color: black
+}
+.about-wrapper h1 {
+    color: white;
+}
+.about-wrapper section {
+    margin: 20px;
+    background-color: white;
+}
+

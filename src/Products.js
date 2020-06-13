@@ -12,7 +12,7 @@ function Product(props) {
     console.log(props.type === props.name);
 
     return (
-        <div className={props.type === props.name ? "product-wrapper selected" : "product-wrapper"}>
+        <div className="product-wrapper">
             <section className="icon">
                 <div className="icon-product-image-size">
                     <img src={`/${props.imageName}`} />
@@ -26,15 +26,17 @@ function Product(props) {
     )
 }
 export default function Products(props) {
+    console.log(props)
     return (
         <div className="products-scrollable">
             {
                 products.map((product, index) => (
-                    <Link key={index} to={`/${product.name}`}>
+                    <Link className={props.type === product.name ? "selected" : ""} key={index} to={`/${product.name}`}>
                         <Product
                             name={product.name}
                             imageName={product.imageName}
                             type={props.type}
+
                         />
                     </Link>
                 ))

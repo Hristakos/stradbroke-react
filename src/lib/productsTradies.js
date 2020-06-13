@@ -1,13 +1,11 @@
 
 const productsTradies = [
-    { type: "Tradies", name: "t product 1", id: "1", img: "notes.jpg" },
-    { type: "Tradies", name: "t product 2", id: "2", img: "notes.jpg" },
-    { type: "Tradies", name: "t product 3", id: "3", img: "notes.jpg" },
-    { type: "Tradies", name: "t product 4", id: "4", img: "notes.jpg" },
-    { type: "Tradies", name: "t product 5", id: "5", img: "notes.jpg" },
-    { type: "Tradies", name: "t product 6", id: "6", img: "notes.jpg" },
-    { type: "Tradies", name: "t product 7", id: "7", img: "notes.jpg" },
-    { type: "Tradies", name: "t product 8", id: "8", img: "notes.jpg" }
+    { type: "Tradies", name: "Business Cards", id: "Business Cards", img: "/tradies/business_cards.jpg" },
+    { type: "Tradies", name: "Envelopes", id: "Envelopes", img: "/tradies/envelopes.jpg" },
+    { type: "Tradies", name: "Invoice Books", id: "Invoice Books", img: "/tradies/invoice_books.jpg" },
+    { type: "Tradies", name: "Letterheads", id: "Letterheads", img: "/tradies/letterheads.jpg" },
+    { type: "Tradies", name: "Purchase Order Books", id: "Purchase Order Books", img: "/tradies/purchase_order_books.jpg" },
+    { type: "Tradies", name: "Quote Books", id: "6", img: "/tradies/quote_books.jpg" }
 
 ];
 
