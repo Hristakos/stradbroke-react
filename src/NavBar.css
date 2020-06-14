@@ -81,15 +81,17 @@ a.active, a:hover {
 /* .check-btn{
     display: block;
 } */
-ul {
+nav ul {    
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 80%;
     top: -100%;
     background: black;
     left: 0;
     text-align: center;
     transition: all .5s;
+    display: grid;
+    align-items: center;
 }
 
 nav ul li {
@@ -108,12 +110,9 @@ li a:hover, li a.active {
 }
 #check:checked ~ ul {
     top: 80px;
+    display: grid;
+}
 
-}
-#check:checked ~ .slider {
-    display: none;
-    
-}
 
 
 @media (max-width: 450px) {

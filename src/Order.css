@@ -25,6 +25,7 @@
     display: none;
     width: 100%;
     flex-basis: auto;
+  
 }
     
     
@@ -36,6 +37,7 @@
     cursor: hand;
     cursor: pointer;
     border-left: 10px solid #ccc;
+    color: dodgerblue;
 } 
 .worko-tabs .tab:hover{
     background-color: #fff;
@@ -47,9 +49,10 @@
 #tab-two:checked ~ .tabs #tab-two-label,
 #tab-three:checked ~ .tabs #tab-three-label,
 #tab-four:checked ~ .tabs #tab-four-label{
-    background-color:yellow;
+    background-color:dodgerblue;
     cursor: default;
-    border-left-color: #69be28;
+    border-left-color: white;
+    color: white;
 }
 
 #tab-one:checked ~ .tabs #tab-one-panel,

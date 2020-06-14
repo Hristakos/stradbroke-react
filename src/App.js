@@ -43,6 +43,7 @@ class App extends React.Component {
 
   state = {
     hideSlider: false,
+    navDisplay: false,
     productType: "",
     slide1: {
       id: 0,
@@ -127,7 +128,8 @@ class App extends React.Component {
 
   handleNavClick = () => {
     this.setState({
-      hideSlider: this.state.hideSlider ? false : true
+      hideSlider: this.state.hideSlider ? false : true,
+      navDisplay: !this.state.navDisplay
     })
   }
   stopCarousel = () => {
@@ -255,7 +257,8 @@ class App extends React.Component {
                 <div className="products-scrollable">
                   <Products />
                 </div>
-                <Order />
+                <Order
+                  navDisplay={this.state.navDisplay} />
               </div>
             </Route>
             <Route path="/Customers">

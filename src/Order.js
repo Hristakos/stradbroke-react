@@ -14,7 +14,7 @@ export default function Order(props) {
     console.log(type)
     return (
 
-        <div className="worko-tabs">
+        <div className="worko-tabs" style={{ display: props.navDisplay ? "none" : "block" }}>
 
             <input className="state" type="radio" title="tab-four" name="tabs-state" id="tab-four" defaultChecked={type === "Promotions" ? true : false} />
             <input className="state" type="radio" title="tab-three" name="tabs-state" id="tab-three" defaultChecked={type === "Tradies" ? true : false} />
@@ -32,7 +32,7 @@ export default function Order(props) {
                     <OrderForm products="Promotions" id={id} image={image} />
                 </div>
                 <div id="tab-three-panel" className="panel">
-                    <OrderForm products="Tradies" id={id} image={image} />
+                    <OrderForm products="Tradies" id={id} />
                 </div>
                 <div id="tab-two-panel" className="panel">
                     <OrderForm products="Schools" id={id} image={image} />
