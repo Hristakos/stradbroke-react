@@ -6,6 +6,7 @@ import Slide from "./Slide";
 import Dots from "./Dots";
 
 
+
 //===========================================
 // CREATE STYLES OBJECT
 //===========================================
@@ -106,18 +107,56 @@ class Slideshow extends Component {
         const { slide1, slide2, currentId } = this.props;
         const { slides } = this.props;
         return (
-            <div className={s.container}>
-                <Slide
-                    image={slides[slide1.id]}
-                    position={slide1.position}
-                    transition={slide1.transition ? s.transition : ""}
-                />
-                <Slide
-                    image={slides[slide2.id]}
-                    position={slide2.position}
-                    transition={slide2.transition ? s.transition : ""}
-                />
-                {/* <Dots slideId={currentId} slides={slides} /> */}
+            <div className="printer">
+
+                <div className={s.container}>
+                    <Dots position="top" slideId={currentId} slides={slides} />
+                    <Slide
+                        image={slides[slide1.id]}
+                        position={slide1.position}
+                        transition={slide1.transition ? s.transition : ""}
+                        link={slide1.link}
+                    />
+                    <Slide
+                        image={slides[slide2.id]}
+                        position={slide2.position}
+                        transition={slide2.transition ? s.transition : ""}
+                        link={slide2.link}
+                    />
+                    <Dots position="bottom" slideId={currentId} slides={slides} />
+                </div>
+                <div className="printer-head-container">
+
+                    <div className="roller-top">
+                        <div className="semi-cirlce-top">
+
+                        </div>
+                        <div className="semi-cirlce-bottom">
+
+                        </div>
+                        <div className="roller-pin">
+
+                        </div>
+                    </div>
+
+                    <div className="roller-bottom">
+                        <div className="semi-cirlce-top">
+
+                        </div>
+                        <div className="semi-cirlce-bottom">
+
+                        </div>
+                        <div className="roller-pin">
+
+                        </div>
+                    </div>
+                    <div className="printer-head">
+
+                    </div>
+
+
+
+                </div>
             </div>
         );
     }

@@ -30,13 +30,13 @@ export default class OrderForm extends React.Component {
         product: this.props.id,
         quantity: "",
         message: "",
-        image: this.props.image,
+        image: this.getProducts().find(product => product.img === this.props.image) ? this.props.image : this.getProducts()[0].img,
         inputError: "",
         requestError: null,
         responseReceived: false,
         slectedExpanded: false,
         showItems: false,
-        selectedItem: this.getProducts().find(product => product.id = this.props.id) || this.getProducts()[0]
+        selectedItem: this.getProducts().find(product => product.id === this.props.id) || this.getProducts()[0]
     }
     handleCompanyChange = (e) => {
         this.setState({ company: e.target.value, inputError: "" });
@@ -45,6 +45,7 @@ export default class OrderForm extends React.Component {
         this.setState({ name: e.target.value, inputError: "" });
     }
     handleEmailChange = (e) => {
+
         this.setState({ email: e.target.value, inputError: "" })
     }
     handlePhoneChange = (e) => {
@@ -72,7 +73,7 @@ export default class OrderForm extends React.Component {
     }
 
     validateUserInput() {
-        console.log("phone length ", this.state.phone.length)
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (this.state.company.length < 3) {
             this.setState({ inputError: "Company name needs to be at least 3 characters long " })
             return false
@@ -81,8 +82,8 @@ export default class OrderForm extends React.Component {
             this.setState({ inputError: "Name needs to be at least 3 characters long" })
             return false
         }
-        if (this.state.email.length < 3) {
-            this.setState({ inputError: "Email needs to be at least 3 characters long." })
+        if (!this.state.email.match(mailformat)) {
+            this.setState({ inputError: "Invalid email address" })
             return false
         }
         if (this.state.phone.length !== 10) {
@@ -161,7 +162,7 @@ export default class OrderForm extends React.Component {
                     <div className="order-form">
 
                         <form>
-                            <div>
+                            <div className="product-img">
 
                                 <img src={this.state.image} />
                             </div>

@@ -36,13 +36,14 @@ export default class ContactForm extends React.Component {
     }
 
     validateUserInput() {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
         if (this.state.name.length < 3) {
             this.setState({ inputError: "Name needs to be at least 3 characters long" })
             return false
         }
-        if (this.state.email.length < 3) {
-            this.setState({ inputError: "Email needs to be at least 3 characters long." })
+        if (!this.state.email.match(mailformat)) {
+            this.setState({ inputError: "Invalid email address" })
             return false
         }
         if (this.state.phone.length !== 10) {
@@ -94,31 +95,35 @@ export default class ContactForm extends React.Component {
         return this.state.requestError ? (<Redirect to="/OrderSomethingWentWrong" />) :
             this.state.responseReceived ? (<Redirect to="/OrderSuccess" />) :
                 (
-                    <div className="contact-form">
+                    <div className="contact-form" autoComplete="off">
                         <form>
-                            <fieldset>
 
-                                <label htmlFor="name">
-                                    <span>Name <span className="required">*</span></span>
-                                    <input onChange={this.handleNameChange} type="text" className="input-field" name="name" />
-                                </label>
-                                <label htmlFor="email">
-                                    <span>Email <span className="required">*</span></span>
-                                    <input onChange={this.handleEmailChange} type="email" className="input-field" name="email" />
-                                </label>
-                                <label htmlFor="phone">
-                                    <span>Phone <span className="required">*</span></span>
-                                    <input onChange={this.handlePhoneChange} type="text" className="input-field" name="phone" />
-                                </label>
-                                <label htmlFor="message">
-                                    <span>Message <span className="required">*</span></span>
-                                    <textarea onChange={this.handleMessageChange} name="message" className="textarea-field"></textarea>
-                                </label>
+                            <div className="input-container">
+                                <input onChange={this.handleNameChange} type="text" name="name" required autoComplete="off" />
+                                <label>Contact Name</label>
+                            </div>
+                            <div className="input-container">
+                                <input onChange={this.handleEmailChange} type="text" name="email" required autoComplete="off" />
+                                <label>Email</label>
+                            </div>
+                            <div className="input-container">
+                                <input onChange={this.handlePhoneChange} type="text" name="phone" required autoComplete="off" />
+                                <label>Phone</label>
+                            </div>
+                            <div className="input-textarea-container">
+                                <textarea onChange={this.handleMessageChange} name="message" placeholder="Leave a message" required autoComplete="off"></textarea>
+                            </div>
+
+                            <div>
+
                                 <label className="required">{this.state.inputError}</label>
-                                <label><span> </span><input onClick={this.handleSubmit} type="submit" value="Submit" /></label>
+                            </div>
 
-                                {/* <div className="g-recaptcha" data-sitekey={reCapture_SITE_KEY}></div> */}
-                            </fieldset>
+
+                            <input onClick={this.handleSubmit} type="submit" value="Submit" className="submit-btn" />
+
+                            {/* <div className="g-recaptcha" data-sitekey={reCapture_SITE_KEY}></div> */}
+
                         </form>
                     </div>
                 )

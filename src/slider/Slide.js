@@ -2,6 +2,7 @@
 // IMPORT DEPENDENCIES
 //===========================================
 import React, { memo } from "react";
+import { Link } from 'react-router-dom'
 
 //===========================================
 // STYLES OBJECT
@@ -14,10 +15,10 @@ const s = {
 //===========================================
 // SLIDE FUNCTIONAL COMPONENT
 //===========================================
-const Slide = ({ position, transition, image }) => {
+const Slide = ({ position, transition, image, link }) => {
     return (
         <div className={s.container + " " + position + " " + transition}>
-            <img src={image} className={s.slideImage} alt="slide" />
+            <Link to={`${link}`}><img src={image} className={s.slideImage} alt="slide" /></Link>
         </div>
     );
 };

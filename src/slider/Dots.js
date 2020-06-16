@@ -8,15 +8,16 @@ import Dot from "./Dot";
 // STYLE OBJECT
 //===========================================
 const s = {
-    container: "fullW height70 abs bot0 fCenter black50"
+    containerBottom: "fullW height70 abs bot0 fCenter black50",
+    containerTop: "fullW height70 abs top0 fCenter black50"
 };
 
 //===========================================
 // DOTS FUNCTIONAL COMPONENT
 //===========================================
-const Dots = ({ slideId, slides }) => {
+const Dots = ({ slideId, slides, position }) => {
     return (
-        <div className={s.container}>
+        <div className={position === "top" ? s.containerTop : s.containerBottom}>
             <div className="row">
                 {slides.map((slide, id) => (
                     <Dot slideId={slideId} dotId={id} key={id} />

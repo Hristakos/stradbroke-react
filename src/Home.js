@@ -13,8 +13,10 @@ export default function Home(props) {
                     slide1={props.slide1}
                     slide2={props.slide2}
                     slides={props.slides}
+                    currentId={props.currentId}
                     handleMount={props.handleMount}
                     handleUnmount={props.handleUnmount} />
+
             </div>
         </div>
     )

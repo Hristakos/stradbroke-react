@@ -17,11 +17,14 @@
     justify-content: space-around;
 }
 .select-box-selected {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: .1fr 1fr .1fr;
+    background-color: yellow;
+    align-items: center;
 }
 .select-box-selected label {
     color: dodgerblue;
+    text-align: left;
   
 }
 .select-box-selected-item {
@@ -29,10 +32,15 @@
     height: 100%;
     width: 100%;
     padding: 4px 12px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     color: dodgerblue;
 }
-
+.select-box-items {
+    border: solid 1px dodgerblue;
+    border-top: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 .select-box-items div {
     /* border-bottom: 1px solid dodgerblue; */
     /* border-left: 1px solid dodgerblue; */

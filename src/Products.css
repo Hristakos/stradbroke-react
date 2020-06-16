@@ -1,4 +1,7 @@
 
+body { 
+  background-color: black;
+}
 .icon a.active, a:hover {
   background: none;
   transition: .5s;

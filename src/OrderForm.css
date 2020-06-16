@@ -17,6 +17,15 @@
     display: block;
     text-align: center;
 } */
+/* body {
+	background-color: white;
+} */
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #fbfbfb inset;
+}
+input:-webkit-autofill:first-line {
+	color:#797979;
+}
 .order-form{
     /* background-color: black; */
 	border-radius:3px;
@@ -27,6 +36,9 @@
 	margin-bottom:25px;
 	width: 100%;
 	height: 50px;	
+}
+.order-form .product-img {
+	margin-bottom: 25px;
 }
 .order-form .input-select-container {
 	position: relative;
@@ -52,7 +64,7 @@
   font-size:16px;
   /* color: white; */
   cursor: pointer;
-  color: dodgerblue;
+  color: #797979;
 }
 .order-form .input-container input:focus{ 
  border:none;	
@@ -106,6 +118,7 @@
 	cursor: pointer;
 	color: white;
 	outline: none;
+	border: none;
 }
 /*.btn:after{
 	content:"";

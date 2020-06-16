@@ -47,12 +47,13 @@ class Slider extends React.Component {
     render() {
         return (
             <div className={s.container}>
-                {/* <div className={s.header}>Products</div> */}
+                <div className={s.header}></div>
                 <div className={s.main}>
                     <Slideshow slides={slides}
                         slide1={this.props.slide1}
                         slide2={this.props.slide2}
-                        slides={this.props.slides} />
+                        slides={this.props.slides}
+                        currentId={this.props.currentId} />
                 </div>
                 {/* <div className={s.footer}>Built in React - by Ashwanth A R</div> */}
             </div>

@@ -29,6 +29,8 @@ import slide4 from "./slider/assets/slide4.jpg";
 
 
 
+
+
 const slides = [slide1, slide2, slide3, slide4];
 const s = {
   container: "fullW fullH rel overflowH",
@@ -37,6 +39,8 @@ const s = {
   offScreenLeft: "leftM100vw",
   transition: "transition1l"
 };
+const links = ["Business", "Schools", "Tradies", "Promotions"];
+let linkCounter = 0;
 let interval;
 class App extends React.Component {
 
@@ -48,13 +52,17 @@ class App extends React.Component {
     slide1: {
       id: 0,
       position: s.onScreen,
-      transition: true
+      transition: true,
+      link: links[linkCounter]
     },
     slide2: {
       id: 1,
       position: s.offScreenRight,
-      transition: true
-    }
+      transition: true,
+      link: links[linkCounter + 1]
+    },
+    currentId: 0
+
   }
 
   // componentDidMount() {
@@ -70,7 +78,7 @@ class App extends React.Component {
   startCarousel = () => {
     interval = setInterval(() => {
       this.transitionSlides();
-    }, 8000);
+    }, 3000);
     console.log(interval)
   };
 
@@ -85,15 +93,19 @@ class App extends React.Component {
   transitionSlides = () => {
     const { slide1, slide2 } = this.state;
     let currentId;
+
     if (slide1["position"] === s.onScreen) {
       slide1["position"] = s.offScreenLeft;
       slide2["position"] = s.onScreen;
+
       currentId = slide2.id;
     } else {
       slide1["position"] = s.onScreen;
       slide2["position"] = s.offScreenLeft;
+
       currentId = slide1.id;
     }
+
     this.setSlideState(slide1, slide2, currentId);
     setTimeout(() => {
       this.resetSlideOffScreen();
@@ -101,17 +113,23 @@ class App extends React.Component {
   };
 
   resetSlideOffScreen = () => {
-
+    if (linkCounter === 3) {
+      linkCounter = 0;
+    } else {
+      linkCounter += 1;
+    }
     const { slide1, slide2, currentId } = this.state;
     //const { slides } = this.props;
     if (slide1["position"] === s.offScreenLeft) {
       slide1["transition"] = false;
       slide1["position"] = s.offScreenRight;
       slide1["id"] = slide2.id + 1 === slides.length ? 0 : slide2.id + 1;
+      slide1["link"] = links[slide2.id + 1 === slides.length ? 0 : slide2.id + 1]
     } else {
       slide2["transition"] = false;
       slide2["position"] = s.offScreenRight;
       slide2["id"] = slide1.id + 1 === slides.length ? 0 : slide1.id + 1;
+      slide2["link"] = links[slide1.id + 1 === slides.length ? 0 : slide1.id + 1]
     }
     this.setSlideState(slide1, slide2, currentId);
     this.resetSlideTransitions(slide1, slide2, currentId);
@@ -136,7 +154,9 @@ class App extends React.Component {
     console.log("stop ! ")
     clearInterval(interval);
   }
-
+  handleClick = () => {
+    console.log("slide clicked");
+  }
   render() {
 
 
@@ -295,6 +315,7 @@ class App extends React.Component {
                 slide1={this.state.slide1}
                 slide2={this.state.slide2}
                 slides={slides}
+                currentId={this.state.currentId}
                 handleMount={this.startCarousel}
                 handleUnmount={this.stopCarousel}
               />
