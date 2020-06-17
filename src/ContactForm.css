@@ -10,6 +10,9 @@ input:-webkit-autofill:first-line {
     padding: 25px ;
     margin: 10%;
 }
+.contact-form .contact-details {
+    margin-bottom: 50px;
+}
 .contact-form .input-container{
 	position:relative;
 	margin-bottom:25px;

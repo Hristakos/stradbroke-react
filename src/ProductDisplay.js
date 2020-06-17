@@ -4,7 +4,7 @@ export default function ProductDisplay(props) {
 
     return (
 
-        <ProductDetail type={props.type} id={props.id} img={props.img} name={props.name} />
+        <ProductDetail navDisplay={props.navDisplay} type={props.type} id={props.id} img={props.img} name={props.name} />
 
     )
 }

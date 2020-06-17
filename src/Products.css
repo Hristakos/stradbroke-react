@@ -1,7 +1,5 @@
 
-body { 
-  background-color: black;
-}
+
 .icon a.active, a:hover {
   background: none;
   transition: .5s;
@@ -21,9 +19,13 @@ body {
   
   .App .products-scrollable a {
     background-color: white;
-    border-radius: 30px;
+    border-radius: 15%;
     border: solid 3px black;
     margin: 10%;
+  }
+  .App .products-scrollable a:hover{
+    border: solid 10px yellow;
+
   }
 
   .App .products-scrollable .selected {
@@ -85,12 +87,18 @@ body {
       }
       .App .products-scrollable {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr) );
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr) );
       }
       .App .products-scrollable img {
-        /* width: 100px;
-        height: 100px; */
+        width: 50px;
+        height: 50px;
+        width: 50px;
+        height: 50px;
         background-color: white;
+      }
+      .products-scrollable .icon-product-name {
+        width: 50px;
+        font-size: 5px;
       }
 
 
@@ -104,3 +112,4 @@ body {
       transform: scaleX(1); 
   }
 }
+

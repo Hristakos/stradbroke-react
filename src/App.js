@@ -25,6 +25,7 @@ import slide2 from "./slider/assets/slide2.jpg";
 import slide3 from "./slider/assets/slide3.jpg";
 import slide4 from "./slider/assets/slide4.jpg";
 // import slide5 from './slider/assets/slide5.jpg';
+import Logo from './Logo';
 
 
 
@@ -164,6 +165,7 @@ class App extends React.Component {
 
       <div className="App" >
         <div className="wrapper">
+
           <nav>
             <NavBar
               onClick={this.handleNavClick}
@@ -173,7 +175,7 @@ class App extends React.Component {
           <Switch>
 
             <Route path="/About">
-              <About />
+              <About navDisplay={this.state.navDisplay} />
 
             </Route>
             <Route path="/Business">
@@ -189,6 +191,7 @@ class App extends React.Component {
                       name={product.name}
                       id={product.id}
                       img={product.img}
+                      navDisplay={this.state.navDisplay}
                     />
                   ))}
 
@@ -208,6 +211,7 @@ class App extends React.Component {
                       name={product.name}
                       id={product.id}
                       img={product.img}
+                      navDisplay={this.state.navDisplay}
                     />
                   ))}
 
@@ -227,6 +231,7 @@ class App extends React.Component {
                       name={product.name}
                       id={product.id}
                       img={product.img}
+                      navDisplay={this.state.navDisplay}
                     />
                   ))}
 
@@ -246,6 +251,7 @@ class App extends React.Component {
                       name={product.name}
                       id={product.id}
                       img={product.img}
+                      navDisplay={this.state.navDisplay}
                     />
                   ))}
 
@@ -258,7 +264,7 @@ class App extends React.Component {
                 <div className="products-scrollable">
                   <Products />
                 </div>
-                <OrderSuccess />
+                <OrderSuccess navDisplay={this.state.navDisplay} />
               </div>
             </Route>
 
@@ -268,7 +274,7 @@ class App extends React.Component {
                 <div className="products-scrollable">
                   <Products />
                 </div>
-                <OrderFailure />
+                <OrderFailure navDisplay={this.state.navDisplay} />
               </div>
             </Route>
             <Route path="/Order">
@@ -287,7 +293,7 @@ class App extends React.Component {
                 <div className="products-scrollable">
                   <Products />
                 </div>
-                <Customers />
+                <Customers navDisplay={this.state.navDisplay} />
               </div>
             </Route>
             <Route path="/Newsletter">
@@ -306,7 +312,7 @@ class App extends React.Component {
                 <div className="products-scrollable">
                   <Products />
                 </div>
-                <ContactForm />
+                <ContactForm navDisplay={this.state.navDisplay} />
               </div>
             </Route>
             <Route to="/">

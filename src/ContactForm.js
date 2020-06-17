@@ -95,7 +95,15 @@ export default class ContactForm extends React.Component {
         return this.state.requestError ? (<Redirect to="/OrderSomethingWentWrong" />) :
             this.state.responseReceived ? (<Redirect to="/OrderSuccess" />) :
                 (
-                    <div className="contact-form" autoComplete="off">
+
+                    <div className="contact-form" autoComplete="off" style={{ display: this.props.navDisplay ? "none" : "block" }}>
+                        <div className="contact-details">
+
+                            <div><a href="tel:03 9305 3111">Phone: 03 9305 3111</a></div>
+                            <div><a href="mailto:admin@stradbrokeprinting.com.au"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email questions to admin@stradbrokeprinting.com.au</a></div>
+                            <div>Address: 76 Hume Highway Somerton vic 3062</div>
+                        </div>
+
                         <form>
 
                             <div className="input-container">

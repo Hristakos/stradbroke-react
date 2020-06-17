@@ -4,6 +4,7 @@ import "./NavBar.css"
 export default function NavBar(props) {
 
     return (
+
         <div className="nav-container">
             <a className="phone" href="tel:03 9305 3111"> <i className="fas fa-phone-alt"></i> 03 9305 3111
             </a>

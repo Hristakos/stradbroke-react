@@ -21,11 +21,12 @@ function SelectBox(props) {
     // })
     // render() {
     return <div className="select-box-box"
-        style={{ marginBottom: props.showItems ? props.items.length * 30 : "25px" }}>
+        style={{ marginBottom: props.showItems ? props.items.length * 30 + 25 : "25px" }}>
 
         <div
-            className="select-box-container"
-            onClick={props.handleDropDown}>
+            className={props.showItems ? "select-box-container-open" : "select-box-container-closed"}
+            onClick={props.handleDropDown}
+        >
             <div className="select-box-selected">
                 <label>Product</label>
                 <div className="select-box-selected-item">

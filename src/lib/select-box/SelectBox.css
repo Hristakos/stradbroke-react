@@ -7,10 +7,21 @@
     left: 0;
     transition: all .5s;
 }
-.select-box-container {
+.select-box-container-closed {
     height: 30px;
     width: 100%;
     border-bottom: 1px solid dodgerblue;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    justify-content: space-around;
+}
+.select-box-container-open {
+    height: 30px;
+    width: 100%;
+    
+    border-bottom: none;
+
     margin: 0;
     padding: 0;
     cursor: pointer;
@@ -21,6 +32,7 @@
     grid-template-columns: .1fr 1fr .1fr;
     background-color: yellow;
     align-items: center;
+    border: none;
 }
 .select-box-selected label {
     color: dodgerblue;

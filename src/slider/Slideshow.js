@@ -107,55 +107,86 @@ class Slideshow extends Component {
         const { slide1, slide2, currentId } = this.props;
         const { slides } = this.props;
         return (
-            <div className="printer">
+            <div className={"printer-container"}>
 
-                <div className={s.container}>
-                    <Dots position="top" slideId={currentId} slides={slides} />
-                    <Slide
-                        image={slides[slide1.id]}
-                        position={slide1.position}
-                        transition={slide1.transition ? s.transition : ""}
-                        link={slide1.link}
-                    />
-                    <Slide
-                        image={slides[slide2.id]}
-                        position={slide2.position}
-                        transition={slide2.transition ? s.transition : ""}
-                        link={slide2.link}
-                    />
-                    <Dots position="bottom" slideId={currentId} slides={slides} />
-                </div>
-                <div className="printer-head-container">
 
-                    <div className="roller-top">
-                        <div className="semi-cirlce-top">
+                <div className="printer">
 
-                        </div>
-                        <div className="semi-cirlce-bottom">
-
-                        </div>
-                        <div className="roller-pin">
-
-                        </div>
+                    <div className={s.container}>
+                        <Dots position="top" slideId={currentId} slides={slides} />
+                        <Slide
+                            image={slides[slide1.id]}
+                            position={slide1.position}
+                            transition={slide1.transition ? s.transition : ""}
+                            link={slide1.link}
+                        />
+                        <Slide
+                            image={slides[slide2.id]}
+                            position={slide2.position}
+                            transition={slide2.transition ? s.transition : ""}
+                            link={slide2.link}
+                        />
+                        <Dots position="bottom" slideId={currentId} slides={slides} />
                     </div>
+                    <div className="printer-head-container">
 
-                    <div className="roller-bottom">
-                        <div className="semi-cirlce-top">
+                        <div className={`roller-top spin${currentId}`}>
+                            <div className="semi-cirlce-top">
 
+                            </div>
+                            <div className="semi-cirlce-bottom">
+
+                            </div>
+                            <div className="roller-pin">
+
+                            </div>
                         </div>
-                        <div className="semi-cirlce-bottom">
 
-                        </div>
-                        <div className="roller-pin">
+                        <div className={`roller-bottom spin${currentId}`}>
+                            <div className="semi-cirlce-top">
 
+                            </div>
+                            <div className="semi-cirlce-bottom">
+
+                            </div>
+                            <div className="roller-pin">
+
+                            </div>
                         </div>
+                        <div className="printer-head">
+                            <div className="display">
+                                <div className={`display-text col${currentId}`}>
+                                    <div className="text-rotate">
+                                        <p>Printing Page</p>
+                                        <p>{currentId + 1} of 4</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="keypad">
+                                <div className="button">1</div>
+                                <div className="button">2</div>
+                                <div className="button">3</div>
+                                <div className="button">4</div>
+                                <div className="button">5</div>
+                                <div className="button">6</div>
+                                <div className="button">7</div>
+                                <div className="button">8</div>
+                                <div className="button">9</div>
+                                <div className="button">*</div>
+                                <div className="button">0</div>
+                                <div className="button">#</div>
+                                <div className="button red"></div>
+                                <div className="button yellow"></div>
+                                <div className="button green"></div>
+
+
+                            </div>
+                        </div>
+
+
+
                     </div>
-                    <div className="printer-head">
-
-                    </div>
-
-
-
                 </div>
             </div>
         );

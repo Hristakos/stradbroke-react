@@ -16,7 +16,7 @@ export default class ProductDetail extends React.Component {
         return (
             <div>
 
-                <div className="product-detail">
+                <div className="product-detail" style={{ display: this.props.navDisplay ? "none" : "flex" }}>
                     <div className="product-name">{this.props.name}</div>
                     <img onClick={this.handleClick} src={this.props.img} />
                     <a href={`/Order?type=${this.props.type}&id=${this.props.id}&image=${this.props.img}`}><div className="order-link">Order</div></a>

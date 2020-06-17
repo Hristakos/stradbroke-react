@@ -8,14 +8,16 @@
 
 
 nav {
-    height: 80px;
+    height: 100px;
     width: 100%;
+
 }
 
 .nav-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    background-color: black;
   }
   .nav-container .check-btn {
       text-align: right;
@@ -34,7 +36,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: yellow;
+    color: rgb(255, 230, 2);
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
@@ -81,6 +83,7 @@ a.active, a:hover {
 /* .check-btn{
     display: block;
 } */
+
 nav ul {    
     position: fixed;
     width: 100%;
@@ -118,7 +121,6 @@ li a:hover, li a.active {
 @media (max-width: 450px) {
  .nav-container  .phone {
         line-height: 80px;
-        color: yellow;
         font-size: 10px;
     }
 

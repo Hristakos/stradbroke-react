@@ -23,6 +23,9 @@
 }
       
 .worko-tabs .flex-tabs .panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #fff;
     padding: 20px;
     min-height: 300px;

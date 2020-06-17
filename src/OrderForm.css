@@ -29,7 +29,10 @@ input:-webkit-autofill:first-line {
 .order-form{
     /* background-color: black; */
 	border-radius:3px;
+
+
 	/* padding: 25px ; */
+
 }
 .order-form .input-container{
 	position:relative;
@@ -82,7 +85,7 @@ input:-webkit-autofill:first-line {
 	outline: none;
 	height: 100px;
 	text-align: left;
-	color: dodgerblue;
+	color:  #797979;
 	padding: 20px;
 	
 	

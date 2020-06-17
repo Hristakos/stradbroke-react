@@ -6,7 +6,8 @@
     /* color: #fff; */
 }
 .slider {
-    margin-top: 20px;
+    margin-top: 50px;
+    
 }
 /*====== WIDTH ======*/
 .slider .screenW {
@@ -32,16 +33,16 @@
 .slider .white {
     background-color:  white;
 }
-.slider .red {
+.slider .red, .col0 {
     background-color: red;
 }
-.slider .green {
+.slider .green, .col1{
     background-color:  green;
 }
-.slider .blue {
+.slider .blue ,.col2{
     background-color: blue;
 }
-.slider .yellow {
+.slider .yellow,.col3 {
     background-color: yellow;
 }
 .slider .white50 {
@@ -107,7 +108,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10px;
+    height: 20px;
 }
 .slider .flex1 {
     flex: 1;
@@ -118,19 +119,112 @@
 
 /*====== CUSTOM ======*/
 .slider .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    width: 12.5px;
+    height: 12.5px;
+    border-radius: 50%;
     transition: background-color 1s ease-in-out;
 }
 
 .slider .printer {
     display: flex;
+    background: white;
 }
-.slider .printer-head-container {
-    width: 50px;
+.slider .printer-head-container { 
+    width: 75px;
+    background-color: lightgray;
+    border-left: 1px solid gray;
+    border-radius: 25%;
 }
+.slider .printer-container { 
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+
+}
+.slider .display {
+    background-color: lightgray;
+    height: 40%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.slider .display .display-text {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6px;
+    width: 80%;
+    height: 80%;
+    
+}
+.slider .text-rotate {
+    transform: rotate(270deg);
+
+}
+.slider .col0 {
+    animation-name: flip1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+    
+}
+.slider .col1 {
+    animation-name: flip2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+   
+}
+.slider .col2 {
+    animation-name: flip1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+   
+}
+.slider .col3 {
+    animation-name: flip2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+  
+}
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color: gray;
+    width: 80%;
+    height: 20%; 
+    align-items: center;
+    /* justify-content: start; */
+    margin: 20%;
+    
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: silver;
+    /* width: 100%; */
+    height: 100%;
+    border: 1px solid black;
+    padding: 2px;
+    font-size: 6px;
+}
+
 .slider .printer-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     position: relative;
@@ -140,7 +234,8 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     border: 1px solid black;
-    top: -100px
+    top: -100px;
+    right: -25%;
 }
 .slider .roller-top {
     display: flex;
@@ -151,21 +246,13 @@
     height: 50px;
     border-radius: 50%;
     background-color: darkgray;
-    animation-name: spin;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
     border: 1px solid black;
     position: relative;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
     border: 1px solid black;
     position: relative;
     transition-delay: 1s;
-    top: -12.5px;
-   
-
-
+    top: -25px;
+    right: -25%;
 }
 
 .slider .roller-bottom {
@@ -177,18 +264,36 @@
     height: 50px;
     border-radius: 50%;
     background-color: darkgray;
-    animation-name: spin;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
     border: 1px solid black;
     position: relative;
     transition-delay: 1s;
-    bottom: -125px
-
-
+    bottom: -62.5%;
+    right: -25%;
 }
-
+.spin0 {
+    animation-name: spin1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+.spin1 {
+    animation-name: spin2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+.spin2 {
+    animation-name: spin1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+.spin3 {
+    animation-name: spin2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
 
 
 .slider .semi-cirlce-top {
@@ -222,7 +327,7 @@
 
     .slider .printer-head-container {
         height: 300px;
-        width: 50px;
+        width: 75px;
     }
     .slider .printer-head {
         top: -100px
@@ -235,6 +340,7 @@
     .slider .roller-top {
         width: 50px;
         height: 50px;
+        top: -25px;
    }
     .slider .semi-cirlce-top {
         width: 20px;
@@ -255,7 +361,7 @@
     }
     .slider .printer-head-container {
         height: 400px;
-        width: 100px;
+        width: 125px;
     }
     .slider .printer-head {
         top: -200px
@@ -268,7 +374,7 @@
     .slider .roller-top {
         width: 100px;
         height: 100px;
-        top: -25px;
+        top: -50px;
    }
     .slider .semi-cirlce-top {
         width: 40px;
@@ -280,6 +386,12 @@
         height: 20px;
         border-radius: 0 0 20px 20px;
     }
+    .slider .display .display-text {
+        font-size: 10px;
+    }
+    .button {
+        font-size: 8px;
+    }
 }
 @media (min-height: 1000px) {
     .slider .screenH {
@@ -290,7 +402,7 @@
     }
     .slider .printer-head-container {
         height: 500px;
-        width: 100px;
+        width: 125px;
     }
     .slider .printer-head {
         top: -200px
@@ -303,7 +415,7 @@
     .slider .roller-top {
         width: 100px;
         height: 100px;
-        top: -25px;
+        top: -50px;
    }
     .slider .semi-cirlce-top {
         width: 40px;
@@ -315,11 +427,20 @@
         height: 20px;
         border-radius: 0 0 20px 20px;
     }
+
+    .slider .display .display-text {
+    font-size: 12px;
+    }
+    .button {
+        font-size: 10px;
+    }
     
 
 }
 
-@keyframes spin { 
+
+
+@keyframes spin1 { 
     from {
         transform:rotate(0deg);
     }
@@ -327,3 +448,27 @@
         transform:rotate(360deg);
     }
   }
+  @keyframes spin2 { 
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+  }
+
+  @keyframes flip1 { 
+    from { 
+        transform: scaleX(-1);; 
+    } to { 
+        transform: scaleX(1); 
+    }
+  }
+  @keyframes flip2 { 
+    from { 
+        transform: scaleX(-1);; 
+    } to { 
+        transform: scaleX(1); 
+    }
+  }
+ 
