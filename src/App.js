@@ -26,6 +26,7 @@ import slide3 from "./slider/assets/slide3.jpg";
 import slide4 from "./slider/assets/slide4.jpg";
 // import slide5 from './slider/assets/slide5.jpg';
 import Logo from './Logo';
+import ContactDetails from './ContactDetails';
 
 
 
@@ -312,7 +313,11 @@ class App extends React.Component {
                 <div className="products-scrollable">
                   <Products />
                 </div>
-                <ContactForm navDisplay={this.state.navDisplay} />
+                <div className="contact-wrapper">
+
+                  <ContactDetails />
+                  <ContactForm navDisplay={this.state.navDisplay} />
+                </div>
               </div>
             </Route>
             <Route to="/">

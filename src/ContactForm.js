@@ -96,43 +96,41 @@ export default class ContactForm extends React.Component {
             this.state.responseReceived ? (<Redirect to="/OrderSuccess" />) :
                 (
 
-                    <div className="contact-form" autoComplete="off" style={{ display: this.props.navDisplay ? "none" : "block" }}>
-                        <div className="contact-details">
-
-                            <div><a href="tel:03 9305 3111">Phone: 03 9305 3111</a></div>
-                            <div><a href="mailto:admin@stradbrokeprinting.com.au"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email questions to admin@stradbrokeprinting.com.au</a></div>
-                            <div>Address: 76 Hume Highway Somerton vic 3062</div>
-                        </div>
-
-                        <form>
-
-                            <div className="input-container">
-                                <input onChange={this.handleNameChange} type="text" name="name" required autoComplete="off" />
-                                <label>Contact Name</label>
-                            </div>
-                            <div className="input-container">
-                                <input onChange={this.handleEmailChange} type="text" name="email" required autoComplete="off" />
-                                <label>Email</label>
-                            </div>
-                            <div className="input-container">
-                                <input onChange={this.handlePhoneChange} type="text" name="phone" required autoComplete="off" />
-                                <label>Phone</label>
-                            </div>
-                            <div className="input-textarea-container">
-                                <textarea onChange={this.handleMessageChange} name="message" placeholder="Leave a message" required autoComplete="off"></textarea>
-                            </div>
-
-                            <div>
-
-                                <label className="required">{this.state.inputError}</label>
-                            </div>
+                    <div className="contact-form-wrapper">
 
 
-                            <input onClick={this.handleSubmit} type="submit" value="Submit" className="submit-btn" />
+                        <div className="contact-form" autoComplete="off" style={{ display: this.props.navDisplay ? "none" : "block" }}>
 
-                            {/* <div className="g-recaptcha" data-sitekey={reCapture_SITE_KEY}></div> */}
+                            <form>
 
-                        </form>
+                                <div className="input-container">
+                                    <input onChange={this.handleNameChange} type="text" name="name" required autoComplete="off" />
+                                    <label>Contact Name</label>
+                                </div>
+                                <div className="input-container">
+                                    <input onChange={this.handleEmailChange} type="text" name="email" required autoComplete="off" />
+                                    <label>Email</label>
+                                </div>
+                                <div className="input-container">
+                                    <input onChange={this.handlePhoneChange} type="text" name="phone" required autoComplete="off" />
+                                    <label>Phone</label>
+                                </div>
+                                <div className="input-textarea-container">
+                                    <textarea onChange={this.handleMessageChange} name="message" placeholder="Leave a message" required autoComplete="off"></textarea>
+                                </div>
+
+                                <div>
+
+                                    <label className="required">{this.state.inputError}</label>
+                                </div>
+
+
+                                <input onClick={this.handleSubmit} type="submit" value="Submit" className="submit-btn" />
+
+                                {/* <div className="g-recaptcha" data-sitekey={reCapture_SITE_KEY}></div> */}
+
+                            </form>
+                        </div >
                     </div>
                 )
     }

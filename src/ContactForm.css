@@ -4,11 +4,20 @@ input:-webkit-autofill {
 input:-webkit-autofill:first-line {
 	color:#797979;
 }
+.contact-form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 2;
+}
 .contact-form{
     background-color: white;
 	border-radius:30px;
     padding: 25px ;
-    margin: 10%;
+    margin: 20px 0;
+    width: 100%;
+   
+    
 }
 .contact-form .contact-details {
     margin-bottom: 50px;
@@ -64,7 +73,7 @@ input:-webkit-autofill:first-line {
 	outline: none;
 	height: 100px;
 	text-align: left;
-	color: dodgerblue;
+	color:  #797979;
 	padding: 20px;
 	
 	

@@ -87,6 +87,19 @@
   width: 100%;
 }
 
+.App .contact-wrapper {
+  display: grid;
+  grid-template-columns: .1fr 1fr .1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1020px){
+
+  .App .contact-wrapper {
+    grid-template-columns: .25fr .5fr .25fr;
+  }
+}
 
 
 

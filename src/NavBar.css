@@ -53,6 +53,19 @@ nav ul li a {
 nav img {
     width: 100%;
     height: 80px;
+    animation: nav-flip-accross;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  
+
+}
+nav .flip-x {
+    animation: nav-flip-up;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   
 
 }
 a.active, a:hover {
@@ -126,7 +139,29 @@ li a:hover, li a.active {
 
 }
 
+@keyframes nav-flip-up { 
+    from { 
+        transform: scaleY(-.5); 
+        
+    } to { 
 
+        transform: scaleY(1.5);
+    }
+
+
+  }
+
+  @keyframes nav-flip-accross { 
+    from { 
+        transform: scaleX(-.5); 
+        /* transform: scaleY(0);  */
+    } to { 
+        /* transform: scaleY(0);  */
+        transform: scaleX(1.5);
+    }
+
+
+  }
 /* @media (min-height: 850px) {
     .slider .screenH {
         height: 400px;

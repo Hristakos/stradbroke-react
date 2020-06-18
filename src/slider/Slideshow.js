@@ -155,7 +155,7 @@ class Slideshow extends Component {
                         </div>
                         <div className="printer-head">
                             <div className="display">
-                                <div className={`display-text col${currentId}`}>
+                                <div className={`display-text flip${currentId}`}>
                                     <div className="text-rotate">
                                         <p>Printing Page</p>
                                         <p>{currentId + 1} of 4</p>
