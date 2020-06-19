@@ -43,7 +43,8 @@ input:-webkit-autofill:first-line {
 	font-size:16px;
 	color: dodgerblue;	
     pointer-events:none;
-	transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Anton', sans-serif;
 
 }
 .contact-form .input-container input{ 
@@ -56,6 +57,7 @@ input:-webkit-autofill:first-line {
   /* color: white; */
   cursor: pointer;
   color: #797979;
+  font-family: 'Anton', sans-serif;
 }
 .contact-form .input-container input:focus{ 
  border:none;	
@@ -74,12 +76,12 @@ input:-webkit-autofill:first-line {
 	height: 100px;
 	text-align: left;
 	color:  #797979;
-	padding: 20px;
-	
-	
+    padding: 20px;
+    font-family: 'Anton', sans-serif;
 }
 .contact-form .input-textarea-container textarea::placeholder{
-	color: dodgerblue;
+    color: dodgerblue;
+    font-family: 'Anton', sans-serif;
 } 
 .contact-form .btn{
 	color:#fff;
@@ -98,7 +100,8 @@ input:-webkit-autofill:first-line {
 .contact-form  .required{
 	color:red;
 	font-weight:normal;
-	vertical-align: middle;
+    vertical-align: middle;
+    font-family: 'Anton', sans-serif;
 }
 .contact-form .submit-btn {
     background-color: dodgerblue;
@@ -109,7 +112,9 @@ input:-webkit-autofill:first-line {
 	cursor: pointer;
 	color: white;
 	outline: none;
-	border: none;
+    border: none;
+    font-family: 'Anton', sans-serif;
+    text-transform:uppercase;
 }
 /*.btn:after{
 	content:"";
@@ -123,7 +128,8 @@ input:-webkit-autofill:first-line {
 .contact-form .input-container input:focus ~ label,
 .contact-form .input-container input:valid ~ label{
 	top:-12px;
-	font-size:12px;
+    font-size:12px;
+    font-family: 'Anton', sans-serif;
 	
 }
 

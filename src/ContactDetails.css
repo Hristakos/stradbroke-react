@@ -5,7 +5,7 @@
     grid-column-start: 2;
 }
 .contact-details {
-    background-color: yellow;
+    background-color: white;
 	border-radius:30px;
     padding: 5% ;
     margin: 1% 10% 1% 10%;
@@ -16,54 +16,60 @@
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
     background-repeat: no-repeat;
+    color: dodgerblue;
 
 }
 .contact-details .contact-phone {
     margin: 8px;
+    font-family: 'Anton', sans-serif;
 }
 .contact-details .contact-phone a{
-    font-size: 8px;
+    font-size: 18px;
     margin: 5px;
     cursor: url(phone.png) , auto;
-    color: black;
+    color: dodgerblue;
     text-transform: uppercase;
     margin: 20px;
+    font-family: 'Anton', sans-serif;
 }
 .contact-details .contact-email {
     margin: 10px 0;
+
 }
 .contact-details .contact-email a {
-    font-size: 8px;
+    font-size: 18px;
     cursor: url(email.png), auto;
     margin: 5px;
-    color: black;
+    color: dodgerblue;
     margin: 10px 0;
+    font-family: 'Anton', sans-serif;
 }
 .contact-details .contact-address {
-    font-size: 8px;
+    font-size: 18px;
     text-transform: uppercase;
     margin: 10px 0;
+    font-family: 'Anton', sans-serif;
 
 }
 
 @media (min-width: 450px) {
     .contact-details .contact-phone a{
-        font-size: 14px;
+        font-size: 22px;
         margin: 5px;
         cursor: url(phone.png) , auto;
-        color: black;
+        color: dodgerblue;
         text-transform: uppercase;
     }
     
     .contact-details .contact-email a {
-        font-size: 14px;
+        font-size: 22px;
         cursor: url(email.png), auto;
         margin: 5px;
-        color: black;
+        color: dodgerblue;
       
     }
     .contact-details .contact-address {
-        font-size: 14px;
+        font-size: 22px;
         margin: 5px;
         text-transform: uppercase;
     

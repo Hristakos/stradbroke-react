@@ -22,6 +22,7 @@
     border-radius: 30px;
     margin: 10px;
     cursor: pointer;
+    font-family: 'Anton', sans-serif;
 }
 .product-detail a {
     color: white;
@@ -41,6 +42,7 @@
     text-transform: uppercase;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px ;
+    font-family: 'Anton', sans-serif;
 }
 .product-display {
     display: grid;

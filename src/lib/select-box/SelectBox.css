@@ -37,6 +37,7 @@
 .select-box-selected label {
     color: dodgerblue;
     text-align: left;
+    font-family: 'Anton', sans-serif;
   
 }
 .select-box-selected-item {
@@ -46,6 +47,7 @@
     padding: 4px 12px;
     /* vertical-align: middle; */
     color: dodgerblue;
+    font-family: 'Anton', sans-serif;
 }
 .select-box-items {
     border: solid 1px dodgerblue;
@@ -61,6 +63,7 @@
     padding: 6px;
     padding-left: 20px;
     cursor: pointer;
+    font-family: 'Anton', sans-serif;
 
 }
 .select-box-items div:hover {

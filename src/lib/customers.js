@@ -1,17 +1,14 @@
 const customers = [
-    { type: "Business", name: "winslow", id: "1", img: "winslow.jpg" },
-    { type: "Business", name: "customer 2", id: "2", img: "winslow.jpg" },
-    { type: "Business", name: "customer 3", id: "3", img: "winslow.jpg" },
-    { type: "Business", name: "customer 4", id: "4", img: "winslow.jpg" },
-    { type: "Business", name: "customer 5", id: "5", img: "winslow.jpg" },
-    { type: "Business", name: "customer 6", id: "6", img: "winslow.jpg" },
-    { type: "Business", name: "customer 7", id: "7", img: "winslow.jpg" },
-    { type: "Business", name: "customer 8", id: "8", img: "winslow.jpg" },
-    { type: "Business", name: "customer 9", id: "9", img: "winslow.jpg" },
-    { type: "Business", name: "customer 10", id: "10", img: "winslow.jpg" },
-    { type: "Business", name: "customer 11", id: "11", img: "winslow.jpg" },
-    { type: "Business", name: "customer 12", id: "12", img: "winslow.jpg" },
-
+    { type: "Business", name: "Winslow", id: "Winslow", img: "/customers/winslow.jpg" },
+    { type: "Business", name: "CFA", id: "CFA", img: "/customers/cfa.jpg" },
+    { type: "Business", name: "Hamilton Morello", id: "Hamilton Marello", img: "/customers/hamilton_morello.jpg" },
+    { type: "Business", name: "ISRI", id: "ISRI", img: "/customers/isri.jpg" },
+    { type: "Business", name: "Noone", id: "Noone", img: "/customers/noone.jpg" },
+    { type: "Business", name: "Blaze Firewood", id: "Blaze Firewood", img: "/customers/blaze_firewood.jpg" },
+    { type: "Business", name: "Snooze", id: "Snooze", img: "/customers/snooze.jpg" },
+    { type: "Business", name: "Tax Banter", id: "Tax Banter", img: "/customers/tax_banter.jpg" },
+    { type: "Business", name: "Novatex International", id: "Novatex International", img: "/customers/novatex_international.jpg" },
+    { type: "Business", name: "The Happy Apple", id: "The Happy Apple", img: "/customers/the_happy_apple.jpg" }
 ];
 
 

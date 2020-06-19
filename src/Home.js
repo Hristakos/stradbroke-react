@@ -8,6 +8,7 @@ export default function Home(props) {
         <div className="middle-section">
             <Products />
 
+
             <div className="slider" style={props.hideSlider ? { display: "none" } : { display: "block" }}>
                 <Slider
                     slide1={props.slide1}
@@ -19,5 +20,6 @@ export default function Home(props) {
 
             </div>
         </div>
+
     )
 }

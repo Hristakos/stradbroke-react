@@ -6,13 +6,6 @@ export default function NavBar(props) {
     return (
 
         <div className="nav-container">
-            <a className="phone" href="tel:03 9305 3111"> <i className="fas fa-phone-alt"></i> 03 9305 3111
-            </a>
-            <div className="flip-x"><img src="/stradbroke-printing-logo.svg" /></div>
-
-
-
-
 
             <input type="checkbox" id="check" onClick={props.onClick} />
             <label htmlFor="check" className="check-btn">
@@ -27,7 +20,14 @@ export default function NavBar(props) {
                 <li><a href="/Newsletter">Newsletter</a></li>
                 <li><a href="/Customers">Customers</a></li>
             </ul>
+            <div className="flip-x"><img src="/stradbroke-printing-logo.svg" /></div>
 
+
+
+
+
+            <a className="phone" href="tel:03 9305 3111">9305 3111
+            </a>
         </div>
 
     )

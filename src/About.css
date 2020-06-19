@@ -1,16 +1,42 @@
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .about-wrapper {
-    margin: 20px 10px;
+    margin: 20px;
     word-break: break-word;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: dodgerblue;
+}
+.about-wrapper span {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    color:  #797979;
+}
+.about-wrapper  h1,p {
+    font-family: 'Anton', sans-serif;
+    margin: 10px;
 }
 
-.about-wrapper  h2,p {
-    color: black
-}
-.about-wrapper h1 {
-    color: white;
+.heading {
+    background-color: black;
+    font-family: 'Anton', sans-serif;
 }
 .about-wrapper section {
-    margin: 20px;
-    background-color: white;
+    margin-top: 10px;
+    font-family: 'Anton', sans-serif;
+    
 }
-
+.about-wrapper li {
+    font-family: 'Anton', sans-serif;
+    /* list-style: disc;
+    text-align: left; */
+}

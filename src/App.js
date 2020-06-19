@@ -27,6 +27,7 @@ import slide4 from "./slider/assets/slide4.jpg";
 // import slide5 from './slider/assets/slide5.jpg';
 import Logo from './Logo';
 import ContactDetails from './ContactDetails';
+import Newsletter from './Newsletter';
 
 
 
@@ -303,7 +304,7 @@ class App extends React.Component {
                 <div className="products-scrollable">
                   <Products />
                 </div>
-                <h1>Newsletter</h1>
+                <Newsletter />
               </div>
             </Route>
 

@@ -28,10 +28,12 @@
 
 .order-failure-message {
    color: black;
+   font-family: 'Anton', sans-serif;
 
 }
 .order-failure .order-failure-message a {
     color: red;
+    font-family: 'Anton', sans-serif;
 }
 
 /* body{background-color:#111;color:#eee;} */

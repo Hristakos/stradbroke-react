@@ -29,6 +29,7 @@ input:-webkit-autofill:first-line {
 .order-form{
     /* background-color: black; */
 	border-radius:3px;
+	
 
 
 	/* padding: 25px ; */
@@ -56,6 +57,7 @@ input:-webkit-autofill:first-line {
 	color: dodgerblue;	
     pointer-events:none;
 	transition: all 0.5s ease-in-out;
+	font-family: 'Anton', sans-serif;
 
 }
 .order-form .input-container input{ 
@@ -68,6 +70,7 @@ input:-webkit-autofill:first-line {
   /* color: white; */
   cursor: pointer;
   color: #797979;
+  font-family: 'Anton', sans-serif;
 }
 .order-form .input-container input:focus{ 
  border:none;	
@@ -87,6 +90,7 @@ input:-webkit-autofill:first-line {
 	text-align: left;
 	color:  #797979;
 	padding: 20px;
+	font-family: 'Anton', sans-serif;
 	
 	
 }
@@ -111,6 +115,7 @@ input:-webkit-autofill:first-line {
 	color:red;
 	font-weight:normal;
 	vertical-align: middle;
+	font-family: 'Anton', sans-serif;
 }
 .order-form .submit-btn {
     background-color: dodgerblue;
@@ -122,6 +127,8 @@ input:-webkit-autofill:first-line {
 	color: white;
 	outline: none;
 	border: none;
+	font-family: 'Anton', sans-serif;
+	text-transform:uppercase;
 }
 /*.btn:after{
 	content:"";

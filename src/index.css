@@ -12,11 +12,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(0, 0, 0, 1);
+  font-family: 'Anton', sans-serif;
 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+
+    font-family: 'Anton', sans-serif;
 }
 

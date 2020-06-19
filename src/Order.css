@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .worko-tabs {
     margin: 20px 10%;
 
@@ -38,6 +39,7 @@
     flex-basis: auto;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+   
   
 }
     
@@ -51,6 +53,7 @@
     cursor: pointer;
     border-left: 10px solid #ccc;
     color: dodgerblue;
+    font-family: 'Anton', sans-serif;
 } 
 .worko-tabs .tab:hover{
     background-color: #fff;
@@ -109,3 +112,10 @@
     }
   } */
 
+  @media (max-width: 600px){
+    .worko-tabs-wrapper {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+  }

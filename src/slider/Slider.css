@@ -6,7 +6,9 @@
     /* color: #fff; */
 }
 .slider {
+   
     margin-top: 50px;
+
     
 }
 /*====== WIDTH ======*/
@@ -128,6 +130,7 @@
 .slider .printer {
     display: flex;
     background: white;
+    height: 200px;
 }
 .slider .printer-head-container { 
     width: 75px;
@@ -318,6 +321,9 @@
 }
 
 @media (min-height: 700px) {
+    .slider .printer {
+        height: 300px;
+    }
     .slider .screenH {
         height: 300px;
     }
@@ -353,6 +359,9 @@
 
 }
 @media (min-height: 850px) {
+    .slider .printer {
+        height: 400px;
+    }
     .slider .screenH {
         height: 400px;
     }
@@ -394,6 +403,9 @@
     }
 }
 @media (min-height: 1000px) {
+    .slider .printer {
+        height: 500px;
+    }
     .slider .screenH {
         height: 500px;
     }
