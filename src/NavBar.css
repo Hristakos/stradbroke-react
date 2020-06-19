@@ -56,15 +56,15 @@ nav img {
     animation: nav-flip-accross;
     animation-duration: 20s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    /* animation-timing-function: linear; */
   
 
 }
 nav .flip-x {
     animation: nav-flip-up;
-    animation-duration: 40s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    /* animation-timing-function: linear; */
    
 
 }
@@ -140,28 +140,100 @@ li a:hover, li a.active {
 }
 
 @keyframes nav-flip-up { 
-    from { 
-        transform: scaleY(-.5); 
-        
-    } to { 
-
-        transform: scaleY(1.5);
+   
+    from {
+       transform: scaleY(1);
+    }
+  
+    10% {
+        transform: scaleY(-1);
     }
 
-
+    20% {
+        transform: scaleY(1);
+    }
+    
+    30% {
+        transform: scaleY(-1);
+    }
+    
+    40% {
+        transform: scaleY(1);
+    }
+  
+    50% {
+        transform: scaleY(-1);
+    }
+    60% {
+        transform: scaleY(1);
+    }
+    
+    70% {
+        transform: scaleY(-1);
+    }
+    80% {
+        transform: scaleY(1);
+    }
+ 
+    90%{
+        transform: scaleX(-1);
+    }
+    
+    to {
+        transform: scaleY(1);
+    }
   }
 
   @keyframes nav-flip-accross { 
-    from { 
-        transform: scaleX(-.5); 
-        /* transform: scaleY(0);  */
-    } to { 
-        /* transform: scaleY(0);  */
-        transform: scaleX(1.5);
+    
+    from {
+        transform: scaleX(1);
     }
 
+    15% {
+        transform: scaleX(-1);   
+    }
+    30% {
+        transform: scaleX(1);
 
-  }
+    }
+    45% {
+        transform: scaleX(-1);
+    
+    }
+ 
+    60% {
+        transform: scaleX(1);
+  
+    }
+   
+    75% {
+        transform: scaleX(-1);
+    
+    }
+/* 
+    90% {
+        transform: scaleX(1);
+    }
+    
+    70% {
+        transform: scaleX(-1);
+    }
+
+    80% {
+         transform: scaleX(1);
+    }
+    
+    90% {
+        transform: scaleX(-1);
+    } */
+    to {
+         transform: scaleX(1);
+    }
+}
+
+
+
 /* @media (min-height: 850px) {
     .slider .screenH {
         height: 400px;
